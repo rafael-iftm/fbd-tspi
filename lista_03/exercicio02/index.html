@@ -53,6 +53,24 @@
     <img src="/fbd-tspi/lista_02/exercicio02/exercicio02.png" alt="">
 
     <h3>b) Faça a conversão do modelo conceitual para o modelo lógico relacional. <a href="/fbd-tspi/lista_03/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a></h3>
+
+    <p><b>Promoção</b> (<u>cod_promocao</u>, descricao, ref_regulamento, data_inicio, data_fim, data sorteio)</p>
+    <p><b>Cliente</b> (<u>id_cliente</u>, nome, email, telefone, login, senha)</p>
+    <p><b>Participar</b> (<u>cod_participacao</u>, <span style="background-color: yellow;">cod_promocao</span>, <span style="background-color: yellow;">id_cliente</span>)</p>
+    <p style="color: darkred;">cod_promocao referencia Promoção</p>
+    <p style="color: darkred;">id_cliente referencia Cliente</p>
+    ___________________________________________________________________________________________
+    <p><b>Cliente</b> (<u>id_cliente</u>, nome, email, telefone, login, senha)</p>
+    <p><b>Ingresso</b> (<u>cod_ingresso</u>, valor, numero_cartao, data_aquisicao, data_utilizacao, <span style="background-color: yellow;">id_cliente</span>)</p>
+    <p style="color: darkred;">id_cliente referencia Cliente</p>
+    ___________________________________________________________________________________________
+    <p><b>Filme</b> (<u>id_filme</u>, titulo, duracao, genero, sinopse, horario_exibicao, data_inicio, data_fim)</p>
+    <p><b>Ingresso</b> (<u>cod_ingresso</u>, valor, numero_cartao, data_aquisicao, data_utilizacao, <span style="background-color: yellow;">id_filme</span>)</p>
+    <p style="color: darkred;">id_filme referencia Filme</p>
+    ___________________________________________________________________________________________
+    <p><b>Sala</b> (<u>cod_sala</u>, nome, capacidade)</p>
+    <p><b>Filme</b> (<u>id_filme</u>, titulo, duracao, genero, sinopse, horario_exibicao, data_inicio, data_fim, <span style="background-color: yellow;">cod_sala</span>)</p>
+    <p style="color: darkred;">cod_sala referencia Sala</p>
   </div>
 </body>
 </html>

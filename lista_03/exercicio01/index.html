@@ -54,6 +54,26 @@
     <img src="/fbd-tspi/lista_02/exercicio01/exercicio01.png" alt="">
 
     <h3>b) Faça a conversão do modelo conceitual para o modelo lógico relacional. <a href="/fbd-tspi/lista_03/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a></h3>
+
+    <p><b>Curso</b> (<u>cd_curso</u>, nome_curso, sigla)</p>
+    <p><b>Aluno Bolsista</b> (<u>nmr_matricula</u>, nome, cpf, rg, link_lates, data_ingresso, <span style="background-color: yellow;">cd_curso</span>)</p>
+    <p style="color: darkred;">cd_curso referencia Curso</p>
+    ___________________________________________________________________________________________
+    <p><b>Aluno Bolsista</b> (<u>nmr_matricula</u>, nome, cpf, rg, link_lates, data_ingresso, cd_curso)</p>
+    <p><b>Projeto</b> (<u>cd_projeto</u>, status, titulo, rg, link_arquivo, <span style="background-color: yellow;">nmr_matricula</span>)</p>
+    <p style="color: darkred;">nmr_matricula referencia Aluno Bolsista</p>
+    ___________________________________________________________________________________________
+    <p><b>Progessor Orientador</b> (<u>cod_funcional</u>, nome, cpf, titulacao, link_lates)</p>
+    <p><b>Projeto</b> (<u>cd_projeto</u>, status, titulo, rg, link_arquivo, <span style="background-color: yellow;">cod_funcional</span>)</p>
+    <p style="color: darkred;">cod_funcional referencia Professor Orientador</p>
+    ___________________________________________________________________________________________
+    <p><b>Categoria</b> (<u>cd_categoria</u>, descricao, org_fomento)</p>
+    <p><b>Projeto</b> (<u>cd_projeto</u>, status, titulo, rg, link_arquivo, <span style="background-color: yellow;">cd_categoria</span>)</p>
+    <p style="color: darkred;">cd_categoria referencia Categoria</p>
+    ___________________________________________________________________________________________
+    <p><b>Edital</b> (<u>nmr_edital</u>, data_inicio, data_fim, link_arquivo)</p>
+    <p><b>Projeto</b> (<u>cd_projeto</u>, status, titulo, rg, link_arquivo, <span style="background-color: yellow;">nmr_edital</span>)</p>
+    <p style="color: darkred;">nmr_edital referencia Edital</p>
   </div>
 </body>
 </html>

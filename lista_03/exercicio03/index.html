@@ -53,6 +53,42 @@
     <img src="/fbd-tspi/lista_02/exercicio03/exercicio03.png" alt="">
 
     <h3>b) Faça a conversão do modelo conceitual para o modelo lógico relacional. <a href="/fbd-tspi/lista_03/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a></h3>
+
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento)</p>
+    <p><b>Plano de Estágio</b> (<u>id_plano_estagio</u>, data_inicio, data_fim, horas_semanais, tipo_estagio, remuneracao, carga_horaria_total, <span style="background-color: yellow;">id_estagio</span>)</p>
+    <p style="color: darkred;">id_estagio referencia Estágio</p>
+    ___________________________________________________________________________________________
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento)</p>
+    <p><b>Registro de Frequência</b> (<u>id_registro_freq</u>, mes, ano, horas_trabalhadas, descricao_atividades, <span style="background-color: yellow;">id_estagio</span>)</p>
+    <p style="color: darkred;">id_estagio referencia Estágio</p>
+    ___________________________________________________________________________________________
+    <p><b>Aluno</b> (<u>id_aluno</u>, nome, numero_matricula, cpf, telefone, data_nascimento, email)</p>
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento, <span style="background-color: yellow;">id_aluno</span>)</p>
+    <p style="color: darkred;">id_aluno referencia Aluno</p>
+    ___________________________________________________________________________________________
+    <p><b>Supervisor</b> (<u>id_supervisor</u>, nome, cpf, telefone, cargo)</p>
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento, <span style="background-color: yellow;">id_supervisor</span>)</p>
+    <p style="color: darkred;">id_supervisor referencia Supervisor</p>
+    ___________________________________________________________________________________________
+    <p><b>Instituição Concedente</b> (<u>id_instituicao</u>, cnpj, razao_social, endereco, telefone, email)</p>
+    <p><b>Supervisor</b> (<u>id_supervisor</u>, nome, cpf, telefone, cargo, informar_responsavel<span style="background-color: yellow;">id_instituicao</span>)</p>
+    <p style="color: darkred;">id_instituicao referencia Instituição Concedente</p>
+    ___________________________________________________________________________________________
+    <p><b>Instituição Concedente</b> (<u>id_instituicao</u>, cnpj, razao_social, endereco, telefone, email)</p>
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento, <span style="background-color: yellow;">id_instituicao</span>)</p>
+    <p style="color: darkred;">id_instituicao referencia Instituição Concedente</p>
+    ___________________________________________________________________________________________
+    <p><b>Professor</b> (<u>cod_funcionario</u>, nome, cpf, telegone, area_atuacao)</p>
+    <p><b>Estágio</b> (<u>id_estagio</u>, descricao_atividades, area_desenvolvimento, escrever_relatorio <span style="background-color: yellow;">cod_funcionario</span>)</p>
+    <p style="color: darkred;">cod_funcionario referencia Professor</p>
+    ___________________________________________________________________________________________
+    <p><b>Professor</b> (<u>cod_funcionario</u>, nome, cpf, telegone, area_atuacao)</p>
+    <p><b>Curso</b> (<u>id_curso</u>, nome, sigla, modalidade, <span style="background-color: yellow;">cod_funcionario</span>)</p>
+    <p style="color: darkred;">cod_funcionario referencia Professor</p>
+    ___________________________________________________________________________________________
+    <p><b>Curso</b> (<u>id_curso</u>, nome, sigla, modalidade)</p>
+    <p><b>Aluno</b> (<u>id_aluno</u>, nome, numero_matricula, cpf, telefone, data_nascimento, email, <span style="background-color: yellow;">id_curso</span>)</p>
+    <p style="color: darkred;">id_curso referencia Curso</p>
   </div>
 </body>
 </html>
