@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exercícios FBD-TSPI</title>
+<title>Exercícios da Lista 04</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -17,12 +17,6 @@
     text-align: center;
     padding: 1rem 0;
   }
-  footer {
-    background-color: #35424a;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem 0;
-  }
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -30,7 +24,6 @@
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    
   }
   ul {
     list-style: none;
@@ -38,29 +31,32 @@
   }
   li {
     margin-bottom: 10px;
-
   }
   a {
     color: #007bff;
     text-decoration: none;
   }
+  img {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
 </style>
 </head>
 <body>
   <header>
-    <h1>Exercícios FBD-TSPI</h1>
+    <h1>Exercício 04</h1>
   </header>
   <div class="container">
-    <h2>Lista de Exercícios:</h2>
-    <ul>
-      <li><a href="lista_01/index.html">Lista 01</a></li>
-      <li><a href="lista_02/index.html">Lista 02</a></li>
-      <li><a href="lista_03/index.html">Lista 03</a></li>
-      <li><a href="lista_04/index.html">Lista 04</a></li>
-    </ul>
+    <h3>Enunciado:</h3>
+    <img src="/lista_04/exercicio04/exercicio04.png" alt="">
+
+    <h3><a href="/lista_04/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a> Resposta:</h3>
+
+    <p>1FN - Presença de relações aninhadas</p>
+    <p><b>Venda</b> (<u>cod_venda</u>, dataV, codDestExportacao, nomeDestExportacao)</p>
+    <p><b>Produto</b> (<u><span style="background-color: yellow;">cod_venda</span>, cod_produto</u>, nomeProd, precoUnit, qtdeProd)</p>
+    <p style="color: darkred;">cod_venda referencia Venda</p>
   </div>
-  <footer>
-    <p>Desenvolvido por: Rafael Andrade Prado</p>
-  </footer>
 </body>
 </html>

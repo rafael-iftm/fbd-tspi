@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #35424a;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    h3 {
+      margin-top: 30px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dicas</h1>
+  </header>
+  <div class="container">
+    <h3>Primeira forma normal (1FN)</h3>
+    <p>Uma relação está na primeira forma normal se todos os seus atributos são <u>monovalorados</u>, <u>simples</u> e <u>não possui relações aninhadas</u>.</p>
+    <ul>
+      <li><strong>Monovalorados:</strong> Cada atributo em uma tabela contém apenas um único valor.</li>
+      <li><strong>Simples:</strong> Os atributos são simples quando não são compostos por subatributos, ou seja, não são divididos em partes menores e contêm informações independentes.</li>
+      <li><strong>Aninhadas:</strong> A ausência de relações aninhadas significa que uma tabela não contém outras tabelas dentro dela. Não há estruturas de dados complexas, como tabelas dentro de tabelas, dentro da relação principal.</li>
+    </ul>
+    <img src="dica01.png" alt="Exemplo Opção 1">
+
+    <h3>Segunda forma normal (2FN)</h3>
+    <p>Uma relação está na segunda forma normal quando duas condições são 
+      satisfeitas:</p>
+    <ul>
+      <li>A relação estiver na primeira forma normal</li>
+      <li>Todos os atributos da relação que não for chave primária dependem funcionalmente de toda a chave primária (Não pode haver depêndencia parcial)</li>
+    </ul>
+    <img src="dica02.png" alt="Exemplo Opção 2">
+
+    <h3>Terceira forma normal (3FN)</h3>
+    <p>Uma relação está na terceira forma normal quando duas condições são 
+      satisfeitas:</p>
+    <ul>
+      <li>A relação estiver na segunda forma normal</li>
+      <li>Não existem atributos não chave que sejam dependentes de outros atributos não chave (atributos não chave devem depender exclusivamente de atributos chave)</li>
+    </ul>
+    <img src="dica03.png" alt="Exemplo Opção 3">
+  </div>
+</body>
+</html>
