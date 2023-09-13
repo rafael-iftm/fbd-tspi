@@ -54,9 +54,17 @@
     <h3><a href="/lista_04/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a> Resposta:</h3>
 
     <p>1FN - Presença de relações aninhadas</p>
-    <p><b>Venda</b> (<u>cod_venda</u>, dataV, codDestExportacao, nomeDestExportacao)</p>
-    <p><b>Produto</b> (<u><span style="background-color: yellow;">cod_venda</span>, cod_produto</u>, nomeProd, precoUnit, qtdeProd)</p>
-    <p style="color: darkred;">cod_venda referencia Venda</p>
+    <p><b>Pedido</b> (<u>numero_pedido</u>, data_pedido, numero_cliente, nome_cliente, endereco_cliente, total_pedido)</p>
+    <p><b>Produto</b> (<u><span style="background-color: yellow;">numero_pedido</span>, numero_produto</u>, nome_produto, qtde_pedida, preco_produto, total_produto)</p>
+    <p style="color: darkred;">numero_pedido referencia Pedido</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p>2FN - Presença de depêndencia parcial</p>
+    <p><b>Pedido</b> (<u>numero_pedido</u>, data_pedido, numero_cliente, total_pedido)</p>
+    <p><b>Produto</b> (<u><span style="background-color: yellow;">numero_pedido</span>, numero_produto</u>, nome_produto, qtde_pedida, preco_produto, total_produto)</p>
+    <p><b>Cliente</b> (<u><span style="background-color: yellow;">numero_cliente</span></u>, nome_cliente, endereco_cliente)</p>
+    <p style="color: darkred;">numero_pedido referencia Pedido</p>
+    <p style="color: darkred;">numero_cliente referencia Cliente</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
   </div>
 </body>
 </html>

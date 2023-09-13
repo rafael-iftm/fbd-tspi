@@ -54,9 +54,20 @@
     <h3><a href="/lista_04/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a> Resposta:</h3>
 
     <p>1FN - Presença de relações aninhadas</p>
-    <p><b>Venda</b> (<u>cod_venda</u>, dataV, codDestExportacao, nomeDestExportacao)</p>
-    <p><b>Produto</b> (<u><span style="background-color: yellow;">cod_venda</span>, cod_produto</u>, nomeProd, precoUnit, qtdeProd)</p>
-    <p style="color: darkred;">cod_venda referencia Venda</p>
+    <p><b>Plano</b> (<u>cod_plano</u>, desc_plano, valor_plano)</p>
+    <p><b>Usuario</b> (<u><span style="background-color: yellow;">cod_plano</span>, cod_user</u>, nome, email, data_nasc)</p>
+    <p><b>Filme</b> (<u><span style="background-color: yellow;">cod_plano</span>, cod_filme</u>, titulo, genero, duracao, ano_lanc, cod_diretor, nome_diretor)</p>
+    <p style="color: darkred;">cod_plano referencia Plano</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p>2FN - Presença de depêndencia parcial</p>
+    <p>3FN - Presença de depêndencia parcial entre atributos não chave</p>
+    <p><b>Plano</b> (<u>cod_plano</u>, desc_plano, valor_plano)</p>
+    <p><b>Usuario</b> (<u><span style="background-color: yellow;">cod_plano</span>, cod_user</u>, nome, email, data_nasc)</p>
+    <p><b>Filme</b> (<u><span style="background-color: yellow;">cod_plano</span>, cod_filme</u>, titulo, genero, duracao, ano_lanc, cod_diretor)</p>
+    <p><b>Diretor</b> (<u><span style="background-color: yellow;">cod_diretor</span></u>, nome_diretor)</p>
+    <p style="color: darkred;">cod_plano referencia Plano</p>
+    <p style="color: darkred;">cod_diretor referencia Diretor</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
   </div>
 </body>
 </html>

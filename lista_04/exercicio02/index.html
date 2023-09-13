@@ -54,9 +54,25 @@
     <h3><a href="/lista_04/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a> Resposta:</h3>
 
     <p>1FN - Presença de relações aninhadas</p>
-    <p><b>Venda</b> (<u>cod_venda</u>, dataV, codDestExportacao, nomeDestExportacao)</p>
-    <p><b>Produto</b> (<u><span style="background-color: yellow;">cod_venda</span>, cod_produto</u>, nomeProd, precoUnit, qtdeProd)</p>
-    <p style="color: darkred;">cod_venda referencia Venda</p>
+    <p><b>Internacao</b> (<u>cod_internacao</u>, num_paciente, data_internacao, nome_paciente, num_quarto, descrição_quarto)</p>
+    <p><b>Medico</b> (<u><span style="background-color: yellow;">cod_internacao</span>, cod_médico, data_atendimento</u>, nome_médico, fone_médico)</p>
+    <p style="color: darkred;">cod_internacao referencia Internacao</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p>2FN - Presença de depêndencia parcial</p>
+    <p><b>Internacao</b> (<u>cod_internacao</u>, num_paciente, data_internacao, num_quarto, descrição_quarto)</p>
+    <p><b>Medico</b> (<u><span style="background-color: yellow;">cod_internacao</span>, cod_médico, data_atendimento</u>, nome_médico, fone_médico)</p>
+    <p><b>Paciente</b> (<u><span style="background-color: yellow;">num_paciente</span></u>, nome_paciente)</p>
+    <p style="color: darkred;">cod_internacao referencia Internacao</p>
+    <p style="color: darkred;">num_paciente referencia Paciente</p>
+    <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p>3FN - Presença de depêndencia parcial entre atributos não chave</p>
+    <p><b>Internacao</b> (<u>cod_internacao</u>, num_paciente, data_internacao, num_quarto)</p>
+    <p><b>Medico</b> (<u><span style="background-color: yellow;">cod_internacao</span>, cod_médico, data_atendimento</u>, nome_médico, fone_médico)</p>
+    <p><b>Paciente</b> (<u><span style="background-color: yellow;">num_paciente</span></u>, nome_paciente)</p>
+    <p><b>Quarto</b> (<u><span style="background-color: yellow;">num_quarto</span></u>, descrição_quarto)</p>
+    <p style="color: darkred;">cod_internacao referencia Internacao</p>
+    <p style="color: darkred;">num_paciente referencia Paciente</p>
+    <p style="color: darkred;">num_quarto referencia Quarto</p>
   </div>
 </body>
 </html>
