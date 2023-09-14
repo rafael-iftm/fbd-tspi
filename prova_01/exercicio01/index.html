@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios da Prova 01</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  img {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Exercício 01</h1>
+  </header>
+  <div class="container">
+    <h3>a) De acordo com esse cenário pede-se o modelo de dados conceitual usando o diagrama
+      entidade-relacionamento.</h3>
+    <img src="/fbd-tspi/prova_01/exercicio01/exercicio_01.png" alt="">
+
+    <h3>b) Faça a conversão do modelo conceitual para o modelo lógico relacional. <a href="/fbd-tspi/prova_01/dicas/index.html" target="_blank" rel="noopener noreferrer">[Dicas]</a></h3>
+
+    <p><b>Usuários</b> (<u>cod_usuario</u>, nome, endereco, email, data_nascimento, link_foto, login, senha)</p>
+    <p><b>Eventos</b> (<u>cod_evento</u>, titulo, descricao, data_inicio, data_termino, periodo_inscricao, valor_inscricao, categoria, <span style="background-color: yellow;">cod_usuario</span>)</p>
+    <p style="color: darkred;">cod_usuario referencia Usuários</p>
+    ___________________________________________________________________________________________
+    <p><b>Eventos</b> (<u>cod_evento</u>, titulo, descricao, data_inicio, data_termino, periodo_inscricao, valor_inscricao)</p>
+    <p><b>Atividade</b> (<u>cod_atividade</u>, titulo, tipo, data_realizacao, carga_horaria, numero_vagas, <span style="background-color: yellow;">cod_evento</span>)</p>
+    <p style="color: darkred;">cod_evento referencia Evento</p>
+    ___________________________________________________________________________________________
+    <p><b>Atividade</b> (<u>cod_atividade</u>, titulo, tipo, data_realizacao, carga_horaria, numero_vagas)</p>
+    <p><b>Profissional</b> (<u>cod_usuario</u>, nome, endereco, email, data_nascimento, link_foto, login, senha, link_lattes, mini_curriculo)</p>
+    <p><b>Oferta</b> (<u>cod_oferta</u>, <span style="background-color: yellow;">cod_atividade, cod_usuario</span>)</p>
+    <p style="color: darkred;">cod_atividade referencia Atividade</p>
+    <p style="color: darkred;">cod_usuario referencia Profissional</p>
+    ___________________________________________________________________________________________
+    <p><b>Atividade</b> (<u>cod_atividade</u>, titulo, tipo, data_realizacao, carga_horaria, numero_vagas)</p>
+    <p><b>Usuários</b> (<u>cod_usuario</u>, nome, endereco, email, data_nascimento, link_foto, login, senha)</p>
+    <p><b>Inscricao</b> (<u>cod_inscricao</u>, <span style="background-color: yellow;">cod_atividade, cod_usuario</span>, data_inscricao, valor_pago)</p>
+    <p style="color: darkred;">cod_atividade referencia Atividade</p>
+    <p style="color: darkred;">cod_usuario referencia Usuario</p>
+    ___________________________________________________________________________________________
+    <p><b>Atividade</b> (<u>cod_atividade</u>, titulo, tipo, data_realizacao, carga_horaria, numero_vagas)</p>
+    <p><b>Certificado</b> (<u>cod_certificado</u>, texto_certificado, data_emissao, <span style="background-color: yellow;">cod_atividade</span>)</p>
+    <p style="color: darkred;">cod_atividade referencia Atividade</p>
+
+  </div>
+</body>
+</html>
